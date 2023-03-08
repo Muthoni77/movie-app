@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext , useState } from "react";
 import { GlobalContext } from "../GlobalContext";
 
 const MovieList = () => {
   const { movieList, loading } = useContext(GlobalContext);
 
   return (
-    <div>
+    <div className="movieList">
       {loading ? (
         <span>Loading... Please wait</span>
       ) : (

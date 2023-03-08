@@ -5,14 +5,14 @@ const Search = () => {
   const { searchParam, handleOnChange, handleSubmit } =
     useContext(GlobalContext);
   return (
-    <div>
+    <div className="search">
       <input
         name="Search"
-        value={searchParam}
+         value={searchParam}
         onChange={handleOnChange}
         placeholder="enter Movie keyword here"
       />
-      <button onClick={handleSubmit}> Submit search</button>
+      <button disabled={searchParam.trim().length <= 2} onClick={handleSubmit}> Submit search</button>
     </div>
   );
 };
